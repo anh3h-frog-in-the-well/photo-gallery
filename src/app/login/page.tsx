@@ -151,10 +151,15 @@ export default function LoginPage() {
         </form>
         
         {!isRegistering && <div>
-                <div className="auth-divider"><span>Or</span></div>
-                  <div className="auth-form">
-                    <button className="auth-submit" onClick={() => signIn('google')}>Sign in with Google</button>
-                </div>
+              <div className="auth-divider"><span>Or</span></div>
+              <div className="auth-form">
+                <button className="auth-submit" onClick={() => signIn('google')}>
+                      <div className="flex place-content-center">
+                        <img src={`google.svg`}></img>
+                        <div className="pl-3">Sign in with Google</div>
+                      </div>
+                </button>
+              </div>
             </div>
         }
        
